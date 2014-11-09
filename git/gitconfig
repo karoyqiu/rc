@@ -1,0 +1,12 @@
+[alias]
+    br = branch
+	co = checkout
+	st = status
+[user]
+	email = karoyqiu@gmail.com
+	name = Roy QIU
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global
+[push]
+	default = simple
