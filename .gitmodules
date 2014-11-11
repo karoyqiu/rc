@@ -13,3 +13,15 @@
 [submodule "vimrc/bundle/vim-airline"]
 	path = vimrc/bundle/vim-airline
 	url = git://github.com/bling/vim-airline.git
+[submodule "vimrc/bundle/tlib_vim"]
+	path = vimrc/bundle/tlib_vim
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule "vimrc/bundle/vim-addon-mw-utils"]
+	path = vimrc/bundle/vim-addon-mw-utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "vimrc/bundle/vim-snipmate"]
+	path = vimrc/bundle/vim-snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "vimrc/bundle/vim-snippets"]
+	path = vimrc/bundle/vim-snippets
+	url = git://github.com/honza/vim-snippets.git
