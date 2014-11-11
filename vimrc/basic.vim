@@ -445,11 +445,12 @@ execute pathogen#infect()
 let g:airline_powerline_fonts = 1
 
 " clang-complete
-let g:clang_auto_select = 1
 let g:clang_snippets = 1
 let g:clang_trailing_placeholder = 1
 let g:clang_close_preview = 1
-let g:clang_user_options = '-std=c++11'
+let g:clang_user_options = "-std=c++11"
+let g:clang_auto_user_options = ".clang_complete, path, compile_commands.json"
+let g:clang_complete_macros = 1
 
 " Taglist
 nnoremap <silent> <F11> :TlistToggle<CR>

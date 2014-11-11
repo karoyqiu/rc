@@ -25,3 +25,6 @@
 [submodule "vimrc/bundle/vim-snippets"]
 	path = vimrc/bundle/vim-snippets
 	url = git://github.com/honza/vim-snippets.git
+[submodule "vimrc/bundle/supertab"]
+	path = vimrc/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
