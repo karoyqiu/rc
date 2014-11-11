@@ -12,5 +12,5 @@ let g:colors_name = "my-peachpuff"
 " Setup my own colors
 hi Folded       guibg=grey30 guifg=gold ctermfg=darkgrey ctermbg=none
 hi FoldColumn   guibg=grey30 guifg=tan ctermfg=darkgrey ctermbg=none
-hi Search       cterm=reverse ctermbg=none
+hi Search       ctermfg=0 ctermbg=3
 
