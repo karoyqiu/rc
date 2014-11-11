@@ -1,6 +1,15 @@
 [submodule "oh-my-zsh"]
 	path = oh-my-zsh
 	url = git@github.com:karoyqiu/oh-my-zsh.git
-[submodule "vimrc"]
-	path = vimrc
-	url = git@github.com:karoyqiu/vimrc.git
+[submodule "vimrc/bundle/vim-pathogen"]
+	path = vimrc/bundle/vim-pathogen
+	url = git://github.com/tpope/vim-pathogen.git
+[submodule "vimrc/bundle/clang_complete"]
+	path = vimrc/bundle/clang_complete
+	url = git://github.com/Rip-Rip/clang_complete.git
+[submodule "vimrc/bundle/vim-fugitive"]
+	path = vimrc/bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
+[submodule "vimrc/bundle/vim-airline"]
+	path = vimrc/bundle/vim-airline
+	url = git://github.com/bling/vim-airline.git
