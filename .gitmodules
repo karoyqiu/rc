@@ -28,3 +28,6 @@
 [submodule "vimrc/bundle/supertab"]
 	path = vimrc/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+[submodule "vimrc/bundle/vim-autoformat"]
+	path = vimrc/bundle/vim-autoformat
+	url = git://github.com/Chiel92/vim-autoformat.git

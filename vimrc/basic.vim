@@ -460,3 +460,8 @@ let Tlist_Show_One_File = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 40
 
+" Autoformat
+noremap <C-F> :Autoformat<CR><CR>
+let g:formatprg_args_c = "--quiet"
+let g:formatprg_args_cpp = "--quiet"
+
