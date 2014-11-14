@@ -465,3 +465,10 @@ noremap <C-F> :Autoformat<CR><CR>
 let g:formatprg_args_c = "--quiet"
 let g:formatprg_args_cpp = "--quiet"
 
+" vim-template
+let g:username = "Roy QIU"
+let g:email = "karoyqiu@gmail.com"
+
+" DoxygenToolkit
+nnoremap <silent> <F12> :Dox<CR>
+

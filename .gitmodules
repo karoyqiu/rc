@@ -31,3 +31,6 @@
 [submodule "vimrc/bundle/vim-autoformat"]
 	path = vimrc/bundle/vim-autoformat
 	url = git://github.com/Chiel92/vim-autoformat.git
+[submodule "vimrc/bundle/vim-template"]
+	path = vimrc/bundle/vim-template
+	url = git@github.com:karoyqiu/vim-template.git
