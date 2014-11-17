@@ -454,14 +454,18 @@ call vundle#begin()
 " let Vundle to manage Vundle
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'tpope/vim-fugitive'
-Plugin 'bling/vim-airline'
-Plugin 'tomtom/tlib_vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'bling/vim-airline'
 Plugin 'garbas/vim-snipmate'
 Plugin 'honza/vim-snippets'
 Plugin 'karoyqiu/vim-template'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-scripts/DoxygenToolkit.vim'
+Plugin 'vim-scripts/a.vim'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'vim-scripts/vimcdoc'
 
 " Vundle - end
 call vundle#end()
@@ -486,11 +490,6 @@ let Tlist_Exit_OnlyWindow = 1
 let Tlist_Show_One_File = 1
 let Tlist_Use_Right_Window = 1
 let Tlist_WinWidth = 40
-
-" Autoformat
-noremap <C-F> :Autoformat<CR><CR>
-let g:formatprg_args_c = "--quiet"
-let g:formatprg_args_cpp = "--quiet"
 
 " vim-template
 let g:username = "Roy QIU"
