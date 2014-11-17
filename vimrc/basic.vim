@@ -370,7 +370,13 @@ map <leader>x :e ~/buffer.md<cr>
 map <leader>pp :setlocal paste!<cr>
 
 " Auto complete {
-inoremap {<CR> {<CR>}<Esc>ko
+autocmd FileType c,cpp inoremap {<CR> {<CR>}<Esc>ko
+
+" autowrite
+set autowrite
+
+" F7 to make
+autocmd FileType c,cpp nnoremap <F7> :make<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -446,13 +452,13 @@ execute pathogen#infect()
 " Aireline
 let g:airline_powerline_fonts = 1
 
-" clang-complete
-let g:clang_snippets = 1
-let g:clang_trailing_placeholder = 1
-let g:clang_close_preview = 1
-let g:clang_user_options = "-std=c++11"
-let g:clang_auto_user_options = ".clang_complete, path, compile_commands.json"
-let g:clang_complete_macros = 1
+" YouCompleteMe
+let g:ycm_enable_diagnostic_signs = 0
+let g:ycm_enable_diagnostic_highlighting = 0
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_extra_conf_globlist = ['~/projects/*']
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 " Taglist
 nnoremap <silent> <F11> :TlistToggle<CR>

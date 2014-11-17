@@ -4,9 +4,6 @@
 [submodule "vimrc/bundle/vim-pathogen"]
 	path = vimrc/bundle/vim-pathogen
 	url = git://github.com/tpope/vim-pathogen.git
-[submodule "vimrc/bundle/clang_complete"]
-	path = vimrc/bundle/clang_complete
-	url = git://github.com/Rip-Rip/clang_complete.git
 [submodule "vimrc/bundle/vim-fugitive"]
 	path = vimrc/bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
@@ -25,9 +22,6 @@
 [submodule "vimrc/bundle/vim-snippets"]
 	path = vimrc/bundle/vim-snippets
 	url = git://github.com/honza/vim-snippets.git
-[submodule "vimrc/bundle/supertab"]
-	path = vimrc/bundle/supertab
-	url = git://github.com/ervandew/supertab.git
 [submodule "vimrc/bundle/vim-autoformat"]
 	path = vimrc/bundle/vim-autoformat
 	url = git://github.com/Chiel92/vim-autoformat.git
