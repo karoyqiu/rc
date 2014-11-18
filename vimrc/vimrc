@@ -465,7 +465,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'vim-scripts/taglist.vim'
-Plugin 'vim-scripts/vimcdoc'
 
 " Vundle - end
 call vundle#end()
