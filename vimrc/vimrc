@@ -379,7 +379,11 @@ autocmd FileType c,cpp inoremap {<CR> {<CR>}<Esc>ko
 set autowrite
 
 " F7 to make
-autocmd FileType c,cpp nnoremap <F7> :make<CR>
+autocmd FileType c,cpp call FindBuild()
+autocmd FileType c,cpp nnoremap <F7> :make<CR><CR>
+" Auto open quickfix window on error, auto close when empty.
+autocmd QuickFixCmdPost [^l]* nested botright cwindow
+autocmd QuickFixCmdPost    l* nested botright cwindow
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -442,6 +446,44 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
+" Find the build directory and set makeprg.
+if has('python')
+function FindBuild()
+python << endpython
+import os
+import vim
+
+h, t = os.path.split(vim.current.buffer.name)
+
+while True:
+    build = os.path.join(h, 'build');
+    if os.path.isdir(build):
+        make = os.path.join(build, 'Makefile')
+        ninja = os.path.join(build, 'build.ninja')
+
+        if os.path.isfile(make):
+            #print 'Found Makefile in', build
+            make = r'set makeprg=make\ -C\ \"{0}\"'.format(build)
+            vim.command(make)
+        elif os.path.isfile(ninja):
+            #print 'Found build.ninja in', build
+            ninja = r'set makeprg=ninja-build\ -C\ \"{0}\"'.format(build)
+            vim.command(ninja)
+        else:
+            #print 'Build system unrecognized'
+            pass
+
+        break
+
+    if len(t) == 0:
+        print 'Not found'
+        break
+
+    h, t = os.path.split(h)
+
+endpython
+endfunction
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -482,7 +524,7 @@ let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
 let g:ycm_extra_conf_globlist = ['~/projects/*']
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
-let g:ycm_key_list_select_completion = ['<Enter>', '<C-n>', '<Down>']
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 nnoremap <silent> g :YcmCompleter GoTo<CR>
 
