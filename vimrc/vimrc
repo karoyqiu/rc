@@ -476,7 +476,6 @@ while True:
         break
 
     if len(t) == 0:
-        print 'Not found'
         break
 
     h, t = os.path.split(h)
@@ -504,10 +503,10 @@ Plugin 'SirVer/ultisnips'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
 Plugin 'honza/vim-snippets'
+Plugin 'karoyqiu/DoxygenToolkit.vim'
 Plugin 'karoyqiu/vim-template'
 Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'vim-scripts/DoxygenToolkit.vim'
 Plugin 'vim-scripts/a.vim'
 Plugin 'vim-scripts/taglist.vim'
 
@@ -515,6 +514,9 @@ Plugin 'vim-scripts/taglist.vim'
 call vundle#end()
 filetype plugin indent on
 
+
+" a.vim
+nnoremap <silent> o :AT<CR>
 
 " Aireline
 let g:airline_powerline_fonts = 1
