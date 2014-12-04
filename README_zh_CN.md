@@ -2,7 +2,7 @@
 
 这个项目是我每天在 Fedora 下进行 C++ 开发的配置文件集合，这些配置文件针对使用 CMake 源代码外编译的 C/C++ 项目进行特殊优化。这些配置文件包括：
 
-* [Zsh](http://www.zsh.org/)：我自己的 [oh-my-zsh](https://github.com/karoyqiu/oh-my-zsh)，fork 自 http://ohmyz.sh/。
+* [Zsh](http://www.zsh.org/)：我自己的 [oh-my-zsh](https://github.com/karoyqiu/oh-my-zsh)，fork 自 http://ohmyz.sh/ 。
 * VIM：基于 [amix/vimrc](https://github.com/amix/vimrc) 的 [Basic 版本](https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim)修改而来，为 C++ 编程进行了优化。
 * [AStyle](http://astyle.sourceforge.net/)：符合本人编程风格的 astylerc，适用于 2.04 或更高版本。
 * Git：全局 gitconfig 和 gitignore 文件。
@@ -25,7 +25,7 @@ Zsh 配合 oh-my-zsh 确实很好用，忽略大小写的补全，命令行参�
   * `nc-cmake`：包含上面两项。
 * 修改默认主题为 ys，启用 git、gitflow、autojump 和 sudo 插件。
 
-安装方法参见 http://ohmyz.sh/。
+安装方法参见 http://ohmyz.sh/ 。
 
 ## VIM
 
@@ -38,8 +38,8 @@ VIM 的配置向来都是一个比较麻烦的事情，一千个程序员有一�
 
 如果满足以上条件，则可以达到以下效果：
 
-* **C/C++ 代码提示及补全**：几乎没有延迟的、基于语法分析的代码补全，虽然赶不上 Visual Assist 好用，但已经差不多了。Ctrl+N/Ctrl+P 在备选项间选择，Tab 键补全。
-* **一键编译**：F7 键一键编译，编译完成后自动定位至编译错误代码，“,n”和“,p”在各编译错误间跳转。
+* **C/C++ 代码提示及补全**：几乎没有延迟的、基于语法分析的代码补全，虽然赶不上 Visual Assist 好用，但已经差不多了。`Ctrl+N`/`Ctrl+P` 在备选项间选择，`Tab` 补全。
+* **一键编译**：`F7` 一键编译，编译完成后自动定位至编译错误代码，`,n` 和 `,p` 在各编译错误间跳转。
 
 ### 安装
 
@@ -48,7 +48,7 @@ VIM 的配置向来都是一个比较麻烦的事情，一千个程序员有一�
 ```
 mv ~/.vimrc ~/.vimrc.bak
 mv ~/.vim ~/.vim.bak
-ln -s /path/to/where-you-clone-rc/vimrc ~/.vimrc
+ln -s /path/to/where-you-clone-rc/vimrc ~/.vim
 ```
 
 ### 包含的插件
@@ -69,41 +69,41 @@ vimrc 中其它插件是上面插件的依赖插件。
 
 ### 键盘映射
 
-* 设置 map leader 为逗号键（”,“）：
+设置 map leader 为逗号键（`,`）：
 
     let mapleader = ","
     let g:mapleader = ","
 
-* “,w”快速保存：
+`,w` 快速保存：
 
     nmap <leader>w :w!<cr>
 
-* 在使用 j/k 移动光标时将长行视为断行：
+在使用 `j`/`k` 移动光标时将长行视为断行：
 
     map j gj
     map k gk
 
-* 将空格键映射为搜索：
+将空格键映射为搜索：
 
     map <space> /
 
-* “,回车”禁用查找高亮：
+`,回车` 禁用查找高亮：
 
     map <silent> <leader><cr> :noh<cr>
 
-* 可视模式下使用 \*/# 键在当前选择内查找：
+可视模式下使用 `*`/`#` 键在当前选择内查找：
 
     vnoremap <silent> * :call VisualSelection('f', '')<CR>
     vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
-* 使用 Ctrl+j/k/h/l 在窗口间移动：
+使用 `Ctrl+j/k/h/l` 在窗口间移动：
 
     map <C-j> <C-W>j
     map <C-k> <C-W>k
     map <C-h> <C-W>h
     map <C-l> <C-W>l
 
-* 标签页相关的映射：
+标签页相关的映射：
 
     map <leader>tn :tabnew<cr>
     map <leader>to :tabonly<cr>
@@ -111,48 +111,48 @@ vimrc 中其它插件是上面插件的依赖插件。
     map <leader>tm :tabmove
     map <leader>t<leader> :tabnext
 
-* “,te”以当前缓冲区路径打开新标签页，在编辑相同目录下的文件时非常有用：
+`,te` 以当前缓冲区路径打开新标签页，在编辑相同目录下的文件时非常有用：
 
     map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 
-* 将 0 键重新映射为移动到第一个非空白字符（原 0 键是移动到行首）：
+将 `0` 重新映射为移动到第一个非空白字符：
 
     map 0 ^
 
-* 出错窗口相关映射：
+出错窗口相关映射：
 
     map <leader>cc :botright cope<cr>
     map <leader>co ggVGy:tabnew<cr>:set syntax=qf<cr>pgg
     map <leader>n :cn<cr>
     map <leader>p :cp<cr>
 
-* “,m”删除 Windows 下的 ^M：
+`,m` 删除 Windows 下的 ^M：
 
     noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
 
-* “,pp”切换粘贴模式：
+`,pp`切换粘贴模式：
 
     map <leader>pp :setlocal paste!<cr>
 
 下面是我的设置。
 
-* C/C++ 文件类型下 F7 执行构建：
+C/C++ 文件类型下 `F7` 执行构建：
 
     autocmd FileType c,cpp nnoremap <F7> :make<CR><CR>
 
-* Alt+O 在新标签页打开相关文件（即在 .h 和 .cpp 文件间切换）：
+`Alt+O` 在新标签页打开相关文件（即在 .h 和 .cpp 文件间切换）：
 
     nnoremap <silent> <A-o> :AT<CR>
 
-* Alt+G 跳转至声明或定义：
+`Alt+G` 跳转至声明或定义：
 
     nnoremap <silent> <A-g> :YcmCompleter GoTo<CR>
 
-* F11 打开/关闭当前文件符号列表：
+`F11` 打开/关闭当前文件符号列表：
 
     nnoremap <silent> <F11> :TlistToggle<CR>
 
-* F12 使用 Doxygen 风格对当前函数、方法或类进行注释：
+`F12` 使用 Doxygen 风格对当前函数、方法或类进行注释：
 
     nnoremap <silent> <F12> :Dox<CR>
 
