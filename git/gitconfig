@@ -4,7 +4,7 @@
 	st = status
 [user]
 	email = karoyqiu@gmail.com
-	name = Roy QIU
+	name = karoyqiu
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
