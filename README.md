@@ -188,7 +188,7 @@ You can read the document of AStyle to see what the astylerc means.
 
 ### clang & ccache
 
-Using ccache with clang is not as easy as with gcc. But I've found some script outside the Great Firewall: [here](http://petereisentraut.blogspot.com/2011/05/ccache-and-clang.html) and [here](http://petereisentraut.blogspot.com/2011/09/ccache-and-clang-part-2.html). I'm sorry to forget the original URL. I will add it back as soon as I find it again.
+Using ccache with clang is not as easy as with gcc. But I've found some script outside the Great Firewall: [here](http://petereisentraut.blogspot.com/2011/05/ccache-and-clang.html) and [here](http://petereisentraut.blogspot.com/2011/09/ccache-and-clang-part-2.html).
 Just copy the two scripts to /usr/lib/ccache in Fedora.
 
     sudo cp scripts/clang* /usr/lib/ccache/
