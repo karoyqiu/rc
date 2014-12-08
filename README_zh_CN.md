@@ -64,7 +64,7 @@ vimrc 包含以下插件，建议在使用过程中阅读这些插件自己的�
 * [vim-snippets](https://github.com/honza/vim-snippets)：代码片段库，供 UltiSnips 使用。
 * [vim-airline](https://github.com/bling/vim-airline)：状态栏插件。
 * [DoxygenToolkit.vim](https://github.com/karoyqiu/DoxygenToolkit.vim)：[Doxygen](https://www.doxygen.org/) 风格代码注释插件，fork 自 [vim-scripts/DoxygenToolkit.vim](https://github.com/vim-scripts/DoxygenToolkit.vim)，将前导字符换成了“\”。
-* [vim-template](https://github.com/karoyqiu/vim-template)：文件模板插件，fork 自 [aperezdc/vim-template](https://github.com/aperezdc/vim-template)，将 C/C++ 文件模板换成 Doyxgen 风格的文件头。
+* [vim-template](https://github.com/karoyqiu/vim-template)：文件模板插件，fork 自 [aperezdc/vim-template](https://github.com/aperezdc/vim-template)，将 C/C++ 文件模板换成 Doxygen 风格的文件头。
 * [a.vim](https://github.com/vim-scripts/a.vim)：在相关文件间切换插件（比如在 .h 和 .cpp 文件之间切换）。
 * [taglist.vim](https://github.com/vim-scripts/taglist.vim)：符号列表插件。
 
@@ -185,7 +185,6 @@ gitconfig 中设置了用户名和邮箱，可根据需要进行修改。
 
 ### clang 和 ccache
 
-直接在 ccache 中使用 clang 会有一些问题（自己试一下就知道了），直到后来在墙外面找到了这两个脚本。Fedora 下直接将这两个脚本复制到 /usr/lib/ccache 下即可。
+直接在 ccache 中使用 clang 会有一些问题（自己试一下就知道了），直到后来在墙外面找到了这两个脚本：[这里](http://petereisentraut.blogspot.com/2011/05/ccache-and-clang.html)和[这里](http://petereisentraut.blogspot.com/2011/09/ccache-and-clang-part-2.html)。Fedora 下直接将这两个脚本复制到 /usr/lib/ccache 下即可。
 
-    scripts/clang
-    scripts/clang++
+    sudo cp scripts/clang* /usr/lib/ccache/
