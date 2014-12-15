@@ -524,7 +524,7 @@ let g:airline_powerline_fonts = 1
 " YouCompleteMe
 let g:ycm_enable_diagnostic_signs = 0
 let g:ycm_enable_diagnostic_highlighting = 0
-let g:ycm_extra_conf_globlist = ['~/projects/*']
+let g:ycm_extra_conf_globlist = ['~/projects/*', '~/Projects/*']
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf.py'
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
